@@ -16,9 +16,7 @@
 	<meta charset="UTF-8">
 	<!-- Site Title -->
 	<title>RoadReady Parts</title>
-	<!--
-			CSS
-			============================================= -->
+	<!--  CSS  ============================================= -->
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/themify-icons.css">
@@ -60,7 +58,6 @@
 
 	<?php
 	$id=$_REQUEST['id'];
-
 	include_once("config.php");
 	?>
 
@@ -85,15 +82,13 @@
 						<h3><?php echo $productrow['productname']; ?></h3>
 						<h2>Rs.<?php echo $productrow['productprice']; ?></h2>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Category</span> : Household</a></li>
 							<li><a href="#"><span>Availibility</span> : In Stock</a></li>
 						</ul>
 						<p><?php echo $productrow['productdescription']; ?></p>
 						
 						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn" href="#">Add to Cart</a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+							<a href="" class="primary-btn AddToCart" id="Wishlist" data-id="<?php echo $productrow['id']; ?>">Add to Cart</a>
+							<a href="" class="primary-btn Wishlist" id="Wishlist" data-id="<?php echo $productrow['id']; ?>"><i class="lnr lnr lnr-heart"></i></a>
 						</div>
 					</div>
 				</div>
@@ -409,6 +404,10 @@
 		</div>
 	</section>
 	<!--================End Product Description Area =================-->
+
+	<!-- Start related-product Area -->
+		<?php include_once("related_product_area.php"); ?>
+	<!-- End related-product Area -->
 	
 
 	<!-- start footer Area -->
@@ -421,6 +420,53 @@
 	include_once("script.php");
 	?>
 
-</body>
+	<script>
+		$(document).ready(function(){
+			$(".AddToCart").click(function(e){
+				e.preventDefault();
+				var product_id=$(this).data('id');
+				$.ajax({
+                    url:"addtocart.php",
+                    type:"GET",
+					cache:false,
+                    data:{
+                        "product_id":product_id
+                    },
+                    success:function(result){
+						if(result==0){
+							
+							window.location.href="login.php";
+						}else{
+							alert("Added to Cart");
+						}
+                    }
+                });
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$(".Wishlist").click(function(e){
+				e.preventDefault();
+				var product_id=$(this).data('id');
+				$.ajax({
+                    url:"addtowishlist.php",
+                    type:"GET",
+					cache:false,
+                    data:{
+                        "product_id":product_id
+                    },
+                    success:function(result){
+						if(result==0){
+							window.location.href="login.php";
+						}else{
+							alert("Added to Wishlist");
+						}
+                    }
+                });
+			});
+		});
+	</script>
 
+</body>
 </html>

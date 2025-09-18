@@ -22,9 +22,7 @@ if(isset($_SESSION['web_uname'])){
     <!-- Site Title -->
     <title>RoadReady Parts</title>
 
-    <!--
-            CSS
-            ============================================= -->
+    <!--  CSS  ============================================= -->
     <link rel="stylesheet" href="css/linearicons.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -158,6 +156,10 @@ if(isset($_SESSION['web_uname'])){
         </div>
     </section>
     <!--================End Cart Area =================-->
+
+    <!-- Start related-product Area -->
+		<?php include_once("related_product_area.php"); ?>
+	<!-- End related-product Area -->
 
     <!-- start footer Area -->
     <?php

@@ -16,9 +16,7 @@
 	<meta charset="UTF-8">
 	<!-- Site Title -->
 	<title>RoadReady Parts | Products</title>
-	<!--
-		CSS
-		============================================= -->
+	<!--  CSS  ============================================= -->
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/themify-icons.css">
@@ -186,6 +184,10 @@
 		
 	</section>
 	<!-- end product Area -->
+
+	<!-- Start related-product Area -->
+		<?php include_once("related_product_area.php"); ?>
+	<!-- End related-product Area -->
 
 	<!-- start footer Area -->
 	<?php
