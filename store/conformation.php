@@ -1,40 +1,3 @@
-<?php
-session_start();
-if(isset($_SESSION['web_uname'])){
-
-	if(!isset($_GET['order_id'])){
-        die("Invalid access. No order ID found.");
-    }
-
-    $order_id = intval($_GET['order_id']);
-
-    // Fetch order details
-	include_once("config.php");
-    $order_qry = "SELECT o.*, 
-                         c.name AS country_name, 
-                         s.name AS state_name, 
-                         ci.name AS city_name, 
-                         p.pincode AS pincode_value
-                  FROM orders o
-                  LEFT JOIN countries c ON o.country = c.id
-                  LEFT JOIN states s ON o.state = s.id
-                  LEFT JOIN cities ci ON o.city = ci.id
-                  LEFT JOIN pincodes p ON o.pincode = p.pincode
-                  WHERE o.id='$order_id' 
-                  AND o.user_id='{$_SESSION['user_id']}'";
-    $order_res = mysqli_query($conn, $order_qry);
-
-    if(mysqli_num_rows($order_res) == 0){
-        die("Order not found.");
-    }
-
-    $order = mysqli_fetch_assoc($order_res);
-
-    // Fetch order items
-    $items_qry = "SELECT * FROM order_items WHERE order_id='$order_id'";
-    $result = mysqli_query($conn, $items_qry);
-?>
-
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -72,6 +35,40 @@ if(isset($_SESSION['web_uname'])){
 		include_once("header.php");
 	?>
 	<!-- end header area -->
+
+	<?php
+	if(isset($_SESSION['web_uname'])){
+
+		if(!isset($_GET['order_id'])){
+    	    die("Invalid access. No order ID found.");
+    	}
+
+    	$order_id = intval($_GET['order_id']);
+    	
+		include_once("config.php");
+    	$order_qry = "SELECT o.*, 
+    	                     c.name AS country_name, 
+    	                     s.name AS state_name, 
+    	                     ci.name AS city_name, 
+    	                     p.pincode AS pincode_value
+    	              FROM orders o
+    	              LEFT JOIN countries c ON o.country = c.id
+    	              LEFT JOIN states s ON o.state = s.id
+    	              LEFT JOIN cities ci ON o.city = ci.id
+    	              LEFT JOIN pincodes p ON o.pincode = p.pincode
+    	              WHERE o.id='$order_id' 
+    	              AND o.user_id='{$_SESSION['user_id']}'";
+    	$order_res = mysqli_query($conn, $order_qry);
+
+    	if(mysqli_num_rows($order_res) == 0){
+    	    die("Order not found.");
+    	}
+
+    	$order = mysqli_fetch_assoc($order_res);
+
+    	$items_qry = "SELECT * FROM order_items WHERE order_id='$order_id'";
+    	$result = mysqli_query($conn, $items_qry);
+	?>
 
 	<!-- Start Banner Area -->
 	<section class="banner-area organic-breadcrumb">

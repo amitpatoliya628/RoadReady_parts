@@ -37,6 +37,7 @@
 
 	<?php
 		session_start();
+		if(isset($_SESSION['web_uname'])){
 		$usernm=$_SESSION['web_uname'];
 		include_once("config.php");
 		$qry = "select * from web_users where username='$usernm'";
@@ -79,6 +80,8 @@
 	  </div>
 	</div>
 	<?php
-	
+		}else{
+			
+		}
 	?>
 

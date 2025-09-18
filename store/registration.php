@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -20,9 +18,7 @@ session_start();
 	<!-- Site Title -->
 	<title>RoadReady Parts</title>
 
-	<!--
-		CSS
-		============================================= -->
+	<!--  CSS  ============================================= -->
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/themify-icons.css">
@@ -80,22 +76,22 @@ session_start();
 								</div>
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="fullname" name="username" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'">
+								<input type="text" required class="form-control" id="fullname" name="username" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="email" class="form-control" id="email" name="email_" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+								<input type="email" required class="form-control" id="email" name="email_" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
 							</div>
 							<div class="col-md-12 form-group">
-    							<input type="tel" class="form-control" id="mobile_no" name="mobile_no" placeholder="Mobile No" pattern="[0-9]{10}" maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10);" onfocus="this.placeholder=''" onblur="this.placeholder='Mobile No'">
+    							<input type="tel" required class="form-control" id="mobile_no" name="mobile_no" placeholder="Mobile No" pattern="[0-9]{10}" maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10);" onfocus="this.placeholder=''" onblur="this.placeholder='Mobile No'">
 							</div>
 							<div class="col-md-12 form-group">
-  								<input type="date" class="form-control" id="bdate" name="bdate" onfocus="this.placeholder=''" onblur="this.placeholder='Birth Date'">
+  								<input type="date" required class="form-control" id="bdate" name="bdate" onfocus="this.placeholder=''" onblur="this.placeholder='Birth Date'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="password" class="form-control" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+								<input type="password" required class="form-control" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
 							</div>
 							<div class="col-md-12 form-group">
-        						<input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'">
+        						<input type="password" required class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'">
     						</div>
 							
 							<div class="col-md-12 form-group">

@@ -1,8 +1,3 @@
-<?php
-session_start();
-if(isset($_SESSION['web_uname'])){
-?>
-
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -40,6 +35,10 @@ if(isset($_SESSION['web_uname'])){
 		include_once("header.php");
 	?>
 	<!-- end header area -->
+
+    <?php
+        if(isset($_SESSION['web_uname'])){
+    ?>
 
     <!-- Start Banner Area -->
     <section class="banner-area organic-breadcrumb">
