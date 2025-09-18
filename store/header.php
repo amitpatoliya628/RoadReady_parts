@@ -70,8 +70,12 @@
 	            <span class="badge badge-light p-2">
 	              <i class="ti-mobile mr-1"></i> +91 <?php echo $row['mobile_no']; ?>
 	            </span>
-	            <span class="badge badge-light p-2">
-	              <i class="ti-mobile mr-1"></i> <?php echo $row['bdate']; ?>
+	            <!-- <span class="badge badge-light p-2">
+	              <i class="ti-mobile mr-1"></i> 
+	            </span> -->
+				<?php  $row['bdate']; ?>
+				<span class="badge badge-light p-2">
+	              <a href="logout.php"><i class="ti-mobile mr-1"></i>Logout</a>
 	            </span>
 	          </div>
 	        </div>

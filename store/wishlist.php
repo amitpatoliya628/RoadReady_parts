@@ -15,7 +15,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>RoadReady Parts</title>
+    <title>RoadReady Parts | Wishlist</title>
 
     <!--  CSS  ============================================= -->
     <link rel="stylesheet" href="css/linearicons.css">
@@ -50,7 +50,6 @@
                         <a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
                         <a href="category.php">Wishlist</a>
                     </nav>
-                    
                 </div>
             </div>
         </div>
