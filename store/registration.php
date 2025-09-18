@@ -61,16 +61,7 @@ session_start();
 	<section class="login_box_area section_gap">
 		<div class="container">
 			<div class="row">
-				<!-- <div class="col-lg-6">
-					<div class="login_box_img">
-						<img class="img-fluid" src="img/login.jpg" alt="">
-						<div class="hover">
-							<h4>New to our website?</h4>
-							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-							<a class="primary-btn" href="registration.php">Create an Account</a>
-						</div>
-					</div>
-				</div> -->
+				
 				<div class="col-lg-12 ">
 					<div class="login_form_inner">
 						<h2>Register in to enter</h2>
@@ -85,18 +76,20 @@ session_start();
 						<form class="row login_form" action="registration_check.php" method="post" id="contactForm" novalidate="novalidate">
 							<div class="col-md-12 form-group">
 								<div class="creat_account">
-									
-									
+											
 								</div>
 							</div>
 							<div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="fullname" name="username" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="email" class="form-control" id="fullname" name="email_" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+								<input type="email" class="form-control" id="email" name="email_" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
 							</div>
 							<div class="col-md-12 form-group">
     							<input type="tel" class="form-control" id="mobile_no" name="mobile_no" placeholder="Mobile No" pattern="[0-9]{10}" maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10);" onfocus="this.placeholder=''" onblur="this.placeholder='Mobile No'">
+							</div>
+							<div class="col-md-12 form-group">
+  								<input type="date" class="form-control" id="bdate" name="bdate" onfocus="this.placeholder=''" onblur="this.placeholder='Birth Date'">
 							</div>
 							<div class="col-md-12 form-group">
 								<input type="password" class="form-control" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">

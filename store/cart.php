@@ -20,7 +20,7 @@ if(isset($_SESSION['web_uname'])){
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>RoadReady Parts</title>
+    <title>RoadReady Parts | Cart</title>
 
     <!--    CSS     -->
     <link rel="stylesheet" href="css/linearicons.css">
@@ -79,7 +79,6 @@ if(isset($_SESSION['web_uname'])){
                                 <th scope="col">Price</th>
                                 <!-- <th scope="col">Total</th>   Discount Price -->
                                 <th scope="col">Remove</th>
-                                <!-- <th scope="col">Quantity</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -110,17 +109,7 @@ if(isset($_SESSION['web_uname'])){
                                     <a href="cart_item_delete.php?id=<?php echo $row['id']; ?>">
                                         <img src="img/rem1.jpg" alt="Remove Item">
                                     </a>
-                                </td>
-                                <!-- <td>
-                                    <div class="product_count">
-                                        <input type="number" name="qty" id="sst" min=1 max=10 value="1" title="Quantity:"
-                                            class="input-text qty">
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;return false;"
-                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                                    </div> 
-                                </td> -->
+                                </td> 
                             </tr>
                             <?php
                                     }
@@ -128,15 +117,10 @@ if(isset($_SESSION['web_uname'])){
                                     echo "<tr><td colspan='4'>your cart is empty</td></tr>";
                                 }
                             ?>
-                            
-                            
                             <tr>
                                 <td>
 
                                 </td>
-                                    <!-- <td>
-
-                                    </td> -->
                                 <td>
                                     <h4>Subtotal</h4>
                                 </td>
@@ -144,26 +128,6 @@ if(isset($_SESSION['web_uname'])){
                                     <h4>Rs.<?php echo number_format($total,2); ?></h4>
                                 </td>
                             </tr>
-                            <!-- <tr class="bottom_button">
-                                <td>
-                                    <a class="gray_btn" href="#">Update Cart</a>
-                                </td>
-                                <td>
-                                    <div class="cupon_text d-flex align-items-center">
-                                        <input type="text" placeholder="Coupon Code">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cupon_text d-flex align-items-center">
-                                        <a class="primary-btn" href="#">Apply</a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="cupon_text d-flex align-items-center">
-                                        <a class="primary-btn" href="#">Close Coupon</a>
-                                    </div>
-                                </td>
-                            </tr> -->
                         </tbody>
                         <tbody>
                             <tr class="out_button_area">
