@@ -155,7 +155,6 @@
 								<h6><?php echo $productrow['productname']; ?></h6>
 								<div class="price">
 									<h6>Rs.<?php echo $productrow['productprice']; ?></h6>
-									<h6 class="l-through">Rs.210.00</h6>
 								</div>
 								<div class="prd-bottom">
 									

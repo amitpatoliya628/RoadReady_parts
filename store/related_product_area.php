@@ -25,7 +25,6 @@
 									<a href="single-product.php?id=<?php  echo $productrow['id']; ?>" class="title"><?php echo $productrow['productname']; ?></a>
 									<div class="price">
 										<h6>Rs.<?php echo $productrow['productprice']; ?></h6>
-										<!-- <h6 class="l-through">Rs.210.00</h6> -->
 									</div>
 								</div>
 							</div>

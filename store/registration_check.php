@@ -16,7 +16,6 @@
         exit();
     }
 
-    //  Insert new user
     $qry = "INSERT INTO web_users(username, email_, mobile_no, bdate, password) 
             VALUES('$username', '$email_', '$mobile_no','$bdate', '".md5($password)."')";
     $result = mysqli_query($conn, $qry) or exit("insert user fail " . mysqli_error($conn));
