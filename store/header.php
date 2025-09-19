@@ -62,7 +62,7 @@
 	        <!-- User Info -->
 	        <div>
 	          <h3 class="mb-2"><?php echo $row['username']; ?></h3>
-	          <p class="text-muted mb-3">Student of BCA</p>
+	          <p class="text-muted mb-3">Welcome to RoadReady Parts</p>
 	          <div class="mb-2">
 	            <span class="badge badge-light p-2">
 	              <i class="ti-email mr-1"></i> <?php echo $row['email_']; ?>
