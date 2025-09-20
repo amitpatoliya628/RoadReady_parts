@@ -70,7 +70,7 @@
                             </div>
                             
                             <div class="col-md-6 form-group p_star">
-                                <input type="tel" pattern="[0-9]{10}" class="form-control" id="number" name="number" placeholder="Phone Number*" required >
+                                <input type="tel" class="form-control" id="number" name="number" placeholder="Phone Number*" maxlength="10" required>
                             </div>
                             <div class="col-md-6 form-group p_star">
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Email Address *" required>
@@ -159,12 +159,11 @@
                             <div class="payment_item active">
                                 <div class="radion_btn">
                                     <input type="radio" id="f-option6" name="payment_method" value="UPI id">
-                                    <label for="f-option6">UPI Payment</label>
+                                    <label for="f-option6">Cash On Delivery</label>
                                     <img src="img/product/card.jpg" alt="">
                                     <div class="check"></div>
                                 </div>
-                                <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal
-                                    account.</p>
+                                <p>Pay When Your Product Reach You By Cash or Online Payment.</p>
                             </div>
                             <div class="creat_account">
                                 <input type="checkbox" id="f-option4" name="selector" required>
@@ -238,7 +237,17 @@
     
     });
     </script>
-
+    <script>
+        document.getElementById("number").addEventListener("input", function () {
+            // remove everything that is not a digit
+            this.value = this.value.replace(/\D/g, '');
+        
+            // enforce max 10 digits
+            if (this.value.length > 10) {
+                this.value = this.value.slice(0, 10);
+            }
+        });
+    </script>
 
 </body>
 </html>
