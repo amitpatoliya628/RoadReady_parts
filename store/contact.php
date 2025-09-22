@@ -87,6 +87,12 @@
 							<div class="form-group">
 								<input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'">
 							</div>
+							<?php  if(isset($_SESSION["error"])){  ?>
+							<p class="text-danger"><?php echo $_SESSION["error"] ?></p>
+							<?php
+									unset($_SESSION["error"]);
+								}
+      						?>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">

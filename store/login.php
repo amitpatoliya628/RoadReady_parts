@@ -18,9 +18,7 @@
 	<!-- Site Title -->
 	<title>RoadReady Parts</title>
 
-	<!--
-		CSS
-		============================================= -->
+	<!--  CSS  ============================================= -->
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/themify-icons.css">
