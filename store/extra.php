@@ -293,6 +293,6 @@
     $send = mail($to, $subject, $body, $headers);
 
 	$_SESSION["error"] = "your mail sent soon.";
-	// header("location:contact.php");
+	header("location:contact.php");
 
 ?>
