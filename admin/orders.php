@@ -98,8 +98,8 @@ if(isset($_SESSION['uname'])){
                                                 <td><?php  echo $row['total']; ?></td>
                                                 <td><?php echo $row['order_date']; ?></td>
                                                 <td>
-                                                    <a href="product_delete.php?id=<?php echo $row['id']; ?>"><i class="fas fa-trash"></i></a>&nbsp &nbsp  &nbsp &nbsp
-                                                    <a href="product_edit.php?id=<?php echo $row['id']; ?>"><i class="fas fa-edit"></i></td></a>
+                                                    <a href="order_delete.php?id=<?php echo $row['id']; ?>"><i class="fas fa-trash"></i></a>&nbsp &nbsp  &nbsp &nbsp
+                                                    <a href="order_edit.php?id=<?php echo $row['id']; ?>"><i class="fas fa-edit"></i></td></a>
                                             </tr>
                                             <?php
                                             }
@@ -122,13 +122,11 @@ if(isset($_SESSION['uname'])){
                                   </tfoot>
                                 </table>
                               </div>
-                              <!-- /.card-body -->
                             </div>
                         </div>
                     </div>
-                </div><!-- /.container-fluid -->
+                </div>
             </section>
-            <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
   

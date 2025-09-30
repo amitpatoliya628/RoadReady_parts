@@ -10,10 +10,10 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="dist\img\photo4.jpg" class="elevation-2">
+        <img src="dist\img\admin.jpg" class="elevation-2">
       </div>
       <div class="info">
-        <a href="#" class="d-block"><b>Amit Patoliya</b></a>
+        <a href="#" class="d-block"><b>Created By: Amit Patoliya</b></a>
       </div>
     </div>
 
@@ -55,7 +55,5 @@
         </li>
       </ul>
     </nav>
-    <!-- /.sidebar-menu -->
   </div>
-  <!-- /.sidebar -->
 </aside>
