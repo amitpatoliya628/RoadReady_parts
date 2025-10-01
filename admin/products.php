@@ -10,10 +10,10 @@ if(isset($_SESSION['uname'])){
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Products</title>
 
-  <!-- add your style here -->
-   <?php
-      include_once("includes/style.php");
-   ?>
+    <!-- add your style here -->
+    <?php
+        include_once("includes/style.php");
+    ?>
     <!-- DataTables -->
     <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -29,9 +29,9 @@ if(isset($_SESSION['uname'])){
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-            <?php
-              include_once("includes/sidebar.php");
-            ?>
+        <?php
+          include_once("includes/sidebar.php");
+        ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -51,7 +51,6 @@ if(isset($_SESSION['uname'])){
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
             </div>
-            <!-- /.content-header -->
 
             <section class="content">
                 <div class="container-fluid">
@@ -61,7 +60,7 @@ if(isset($_SESSION['uname'])){
                             <div class="card">
                                 <div class="card-header">
                                     <h3 class="card-title"><b>Products list</b></h3>
-                                    <a href="product_add.php"><button class="btn btn-primary float-right">Add Me</button></a>
+                                    <a href="product_add.php"><button class="btn btn-primary float-right">Add New Product</button></a>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">

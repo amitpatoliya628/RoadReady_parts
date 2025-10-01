@@ -29,9 +29,9 @@ if(isset($_SESSION['uname'])){
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-            <?php
-              include_once("includes/sidebar.php");
-            ?>
+        <?php
+          include_once("includes/sidebar.php");
+        ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -49,9 +49,8 @@ if(isset($_SESSION['uname'])){
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
-                </div><!-- /.container-fluid -->
+                </div>
             </div>
-            <!-- /.content-header -->
 
             <section class="content">
                 <div class="container-fluid">
@@ -59,12 +58,9 @@ if(isset($_SESSION['uname'])){
                     <div class="row">  
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title"><b>Orders list</b></h3>
-                                    <a href="Orders_add.php"><button class="btn btn-primary float-right">Add Me</button></a>
-                                </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
+                                    <h3 class="card-title"><b>Orders list</b></h3>
                                     <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
@@ -99,13 +95,10 @@ if(isset($_SESSION['uname'])){
                                                 <td><?php echo $row['order_date']; ?></td>
                                                 <td>
                                                     <a href="order_delete.php?id=<?php echo $row['id']; ?>"><i class="fas fa-trash"></i></a>&nbsp &nbsp  &nbsp &nbsp
-                                                    <a href="order_edit.php?id=<?php echo $row['id']; ?>"><i class="fas fa-edit"></i></td></a>
                                             </tr>
                                             <?php
                                             }
                                         ?>
-                                    
-
                                   </tbody>
                                   <tfoot>
                                   <tr>
