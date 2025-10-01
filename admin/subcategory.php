@@ -61,7 +61,7 @@ if(isset($_SESSION['uname'])){
                             <div class="card">
                                 <div class="card-header">
                                     <h3 class="card-title"><b>SubCategory list</b></h3>
-                                    <a href="subcategory_add.php"><button class="btn btn-primary float-right">Add Me</button></a>
+                                    <a href="subcategory_add.php"><button class="btn btn-primary float-right">New Subcategory</button></a>
                                 </div>
                                 <div class="card-body">
                                     <table id="example1" class="table table-bordered table-striped">
