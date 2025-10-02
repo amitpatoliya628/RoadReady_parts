@@ -4,7 +4,6 @@
 
     extract($_POST);
 
-
     //  Check username and email
     $qry = "SELECT * FROM web_users WHERE username='$username' OR email_='$email_' OR mobile_no='$mobile_no'";
     $result = mysqli_query($conn, $qry) or exit("check user fail " . mysqli_error($conn));

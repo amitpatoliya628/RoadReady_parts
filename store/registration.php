@@ -69,7 +69,7 @@
           					unset($_SESSION["error"]);
          					}
       					?>
-						<form class="row login_form" action="registration_check.php" method="post" id="contactForm" novalidate="novalidate">
+						<form class="row login_form" action="registration_check.php" method="post" id="contactForm">
 							<div class="col-md-12 form-group">
 								<div class="creat_account">
 											
