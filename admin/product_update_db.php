@@ -11,19 +11,21 @@ if(isset($_SESSION['uname'])){
         $path="../images_/products/".$filename;
 
         if(move_uploaded_file($_FILES['image']['tmp_name'],$path)){
-            $qry = "update products set catid='".$catid."',productname='".$productname."',productprice='".$productprice."',productdescription='".$productdescription."',image='".$filename."'where id=$id";
+            $qry = "UPDATE products set catid='".$catid."',productname='".$productname."',productprice='".$productprice."',productdescription='".$productdescription."',image='".$filename."'where id=$id";
             mysqli_query($conn, $qry) or exit("product update fail".mysqli_error($conn));
-            $_SESSION['error']="product update successfully";
+            $_SESSION['error']="product update successfully";   
             header("location:products.php");
+            
         }else{
             $_SESSION["error"] = "file upoad fail";
             header("location:products_add.php");
         }
     }else {
-        $qry = "update products set productname='".$productname."',productprice='".$productprice."',productdescription='".$productdescription."'where id=$id";
+        $qry = "UPDATE products set catid='" . $catid . "', productname='".$productname."',productprice='".$productprice."', productdescription='".$productdescription."' WHERE id=$id";
         mysqli_query($conn, $qry) or exit("category insert fail".mysqli_error($conn));
         $_SESSION['error']="product update successfully";
         header("location:products.php");
+        
     }
 
 

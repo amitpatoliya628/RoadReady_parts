@@ -11,7 +11,7 @@ if(isset($_SESSION['uname'])){
         $path="../images_/subcategories/".$filename;
 
         if(move_uploaded_file($_FILES['image']['tmp_name'],$path)){
-            $qry = "update subcategories set catid='".$catid."',subcatname='".$subcatname."',subcatdescription='".$subcatdescription."',image='".$filename."'where id=$id";
+            $qry = "UPDATE subcategories set catid='".$catid."',subcatname='".$subcatname."',subcatdescription='".$subcatdescription."',image='".$filename."'where id=$id";
             mysqli_query($conn, $qry) or exit("subcategory update fail".mysqli_error($conn));
             $_SESSION['error']="subcategory update successfully";
             header("location:subcategory.php");
