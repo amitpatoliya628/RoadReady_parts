@@ -1,5 +1,0 @@
-user.php
-
-user image
-user name
-user addresses
