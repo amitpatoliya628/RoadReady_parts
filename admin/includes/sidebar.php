@@ -55,7 +55,7 @@
         </li>
         <li class="nav-item">
           <a href="users.php" class="nav-link">
-            <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon far fa-envelope"></i>
             <p>
               Users
             </p>

@@ -50,25 +50,42 @@ if(isset($_SESSION['uname'])){
     <!-- /.content-header -->
 
     <?php
-      include_once("includes/config.php");
-      $ordqry = "select COUNT(*) AS ordtotal FROM orders";
-      $ordresult=mysqli_query($conn, $ordqry) or exit("category select fail".mysqli_error($conn));
-      $ordrow=mysqli_fetch_array($ordresult);
 
-      $catqry = "select COUNT(*) AS cattotal FROM categories";
-      $catresult=mysqli_query($conn, $catqry) or exit("category select fail".mysqli_error($conn));
-      $catrow=mysqli_fetch_array($catresult);
-
-      $subcatqry = "select COUNT(*) AS subcattotal FROM subcategories";
-      $subcatresult=mysqli_query($conn, $subcatqry) or exit("category select fail".mysqli_error($conn));
-      $subcatrow=mysqli_fetch_array($subcatresult);
-
-      $proqry = "select COUNT(*) AS prototal FROM products";
-      $proresult=mysqli_query($conn, $proqry) or exit("category select fail".mysqli_error($conn));
-      $prorow=mysqli_fetch_array($proresult);
     ?>
+
     <!-- Main content -->
-    
+      <section class="content">
+      <!-- Default box -->
+      <div class="card card-solid">
+        <div class="card-body pb-0">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+              <div class="card bg-light d-flex flex-fill">
+                <div class="card-header text-muted border-bottom-0">
+                  Digital Strategist
+                </div>
+                <div class="card-body pt-0">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="lead"><b>Amit Patoliya</b></h2>
+                      <ul class="ml-4 mb-0 fa-ul text-muted">
+                        <li class="small"><span class="fa-li"><i class=""></i></span> &nbsp</li>
+                        <li class="small"><span class="fa-li"><i class="fa fa-envelope"></i></span> Email : amit@gmail.com</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone : 1111111111</li>
+                      </ul>
+                    </div>
+                    <div class="col-5 text-center">
+                      <img src="dist/img/avatar5.png" alt="user-avatar" class="img-circle img-fluid">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+      <!-- /.card -->
+    </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
