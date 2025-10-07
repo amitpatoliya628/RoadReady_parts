@@ -57,7 +57,7 @@
 	<section class="login_box_area section_gap">
 		<div class="container">
 			<div class="row">
-				
+
 				<div class="col-lg-12 ">
 					<div class="login_form_inner">
 						<h2>Register in to enter</h2>
@@ -85,7 +85,7 @@
     							<input type="tel" required class="form-control" id="mobile_no" name="mobile_no" placeholder="Mobile No" pattern="[0-9]{10}" maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10);" onfocus="this.placeholder=''" onblur="this.placeholder='Mobile No'">
 							</div>
 							<div class="col-md-12 form-group">
-  								<input type="date" required class="form-control" id="bdate" name="bdate" onfocus="this.placeholder=''" onblur="this.placeholder='Birth Date'">
+  								<input type="date" required class="form-control" id="bdate" name="bdate">
 							</div>
 							<div class="col-md-12 form-group">
 								<input type="password" required class="form-control" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
@@ -97,12 +97,11 @@
 							<div class="col-md-12 form-group">
 								<div class="creat_account">
 									
-									
 								</div>
 							</div>
 							<div class="col-md-12 form-group">
 								<button type="submit" value="submit" class="primary-btn">Register</button>
-								<a href="#">Home Page</a>
+								<a href="index.php">Home Page</a>
 							</div>
 						</form>
 					</div>
@@ -128,7 +127,7 @@
     	let confirmPassword = document.getElementById("confirm_password").value;
 
     	if (password !== confirmPassword) {
-        	e.preventDefault(); // stop form submission
+        	e.preventDefault(); 
         	alert("Password and Conform Password is not matching!");
     	}
 		});

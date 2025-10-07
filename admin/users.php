@@ -91,6 +91,13 @@ if(isset($_SESSION['uname'])){
                     </div>
                   </div>
                 </div>
+                <div class="card-footer">
+                  <div class="text-right">
+                    <a href="#" class="btn btn-sm btn-primary">
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <?php
@@ -124,3 +131,4 @@ if(isset($_SESSION['uname'])){
   header("location:index.php");
 }
 ?>
+
