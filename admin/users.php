@@ -50,10 +50,6 @@ if(isset($_SESSION['uname'])){
     </div>
     <!-- /.content-header -->
 
-    <?php
-
-    ?>
-
     <!-- Main content -->
       <section class="content">
       <!-- Default box -->
@@ -67,6 +63,13 @@ if(isset($_SESSION['uname'])){
                   
           </div>
           <div class="row">
+            <?php
+              include_once("includes/config.php");
+              $qry="select * from users";
+              $result=mysqli_query($conn,$qry) or exit("users select fail".mysqli_error($conn));
+              while ($row=mysqli_fetch_array($result)) {
+                
+            ?>
             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
               <div class="card bg-light d-flex flex-fill">
                 <div class="card-header text-muted border-bottom-0">
@@ -75,12 +78,12 @@ if(isset($_SESSION['uname'])){
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b>Amit Patoliya &nbsp<sup>Role</sup></b></h2>
+                      <h2 class="lead"><b><?php echo $row['username']; ?> &nbsp<sup><?php echo $row['role']; ?></sup></b></h2>
                       <ul class="ml-4 mb-0 fa-ul text-muted">
                         <li class="small"><span class="fa-li"><i class=""></i></span> &nbsp</li>
-                        <li class="small"><span class="fa-li"><i class="fa fa-envelope"></i></span> Email : amit@gmail.com</li>
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone : 1111111111</li>
-                        <li class="small"><span class="fa-li"><i class="fa fa-calendar"></i></span> Birth Date : 15/04/2006</li>
+                        <li class="small"><span class="fa-li"><i class="fa fa-envelope"></i></span> Email : <?php echo $row['email_']; ?></li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone : <?php echo $row['mobile_no']; ?></li>
+                        <li class="small"><span class="fa-li"><i class="fa fa-calendar"></i></span> Birth Date : <?php echo $row['bdate']; ?></li>
                       </ul>
                     </div>
                     <div class="col-5 text-center">
@@ -90,6 +93,9 @@ if(isset($_SESSION['uname'])){
                 </div>
               </div>
             </div>
+            <?php
+              }
+            ?>
           </div>
         </div>  
       </div>
