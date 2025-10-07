@@ -39,7 +39,7 @@
         </li>
         <li class="nav-item">
           <a href="products.php" class="nav-link">
-            <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fa fa-boxes"></i>
             <p>
               Products
             </p>
@@ -47,7 +47,7 @@
         </li>
         <li class="nav-item">
           <a href="orders.php" class="nav-link">
-            <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fa fa-cart-plus"></i>
             <p>
               Orders
             </p>
@@ -55,7 +55,7 @@
         </li>
         <li class="nav-item">
           <a href="users.php" class="nav-link">
-            <i class="nav-icon far fa-envelope"></i>
+            <i class="nav-icon far fa-user"></i>
             <p>
               Users
             </p>

@@ -8,7 +8,7 @@ if(isset($_SESSION['uname'])){
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home Page</title>
+  <title>User</title>
 
   <!-- add your style here -->
    <?php
@@ -37,11 +37,12 @@ if(isset($_SESSION['uname'])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">Users</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="homepage.php">Home</a></li>
+              <li class="breadcrumb-item" active>User</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -58,20 +59,28 @@ if(isset($_SESSION['uname'])){
       <!-- Default box -->
       <div class="card card-solid">
         <div class="card-body pb-0">
+          <div class="card-header">
+              <h3 class="card-title"><b>Users list</b></h3>
+              <a href="user_add.php"><button class="btn btn-primary float-right">New User</button></a>
+          </div>
+          <div class="card-header text-muted border-bottom-0">
+                  
+          </div>
           <div class="row">
             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
               <div class="card bg-light d-flex flex-fill">
                 <div class="card-header text-muted border-bottom-0">
-                  Digital Strategist
+                  
                 </div>
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b>Amit Patoliya</b></h2>
+                      <h2 class="lead"><b>Amit Patoliya &nbsp<sup>Role</sup></b></h2>
                       <ul class="ml-4 mb-0 fa-ul text-muted">
                         <li class="small"><span class="fa-li"><i class=""></i></span> &nbsp</li>
                         <li class="small"><span class="fa-li"><i class="fa fa-envelope"></i></span> Email : amit@gmail.com</li>
                         <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone : 1111111111</li>
+                        <li class="small"><span class="fa-li"><i class="fa fa-calendar"></i></span> Birth Date : 15/04/2006</li>
                       </ul>
                     </div>
                     <div class="col-5 text-center">
@@ -95,7 +104,7 @@ if(isset($_SESSION['uname'])){
       include_once("includes/footer.php");
     ?>
   
-  <!-- add script here -->
+    <!-- add script here -->
     <?php
       include_once("includes/script.php");
     ?>
