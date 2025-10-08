@@ -1,6 +1,8 @@
 <?php
 session_start();
 if(isset($_SESSION['uname'])){
+  if ($_SESSION['role']=="Admin") {
+    
 ?>
 
 <!DOCTYPE html>
@@ -69,6 +71,7 @@ if(isset($_SESSION['uname'])){
               $result=mysqli_query($conn,$qry) or exit("users select fail".mysqli_error($conn));
               while ($row=mysqli_fetch_array($result)) {
                 
+                
             ?>
             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
               <div class="card bg-light d-flex flex-fill">
@@ -93,7 +96,7 @@ if(isset($_SESSION['uname'])){
                 </div>
                 <div class="card-footer">
                   <div class="text-right">
-                    <a href="user_delete.php" class="btn btn-sm btn-primary">
+                    <a href="user_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-primary">
                       <i class="fa fa-trash"></i>
                     </a>
                   </div>
@@ -126,6 +129,11 @@ if(isset($_SESSION['uname'])){
 </html>
 
 <?php
+
+            }else{
+              $_SESSION["error"]="You are not able to access this page";
+              header("location:homepage.php");
+            }
 }else{
   $_SESSION["error"] = "you are not authorize to access this page without login";
   header("location:index.php");

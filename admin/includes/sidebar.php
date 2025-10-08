@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="homepage.php" class="brand-link">
@@ -13,7 +18,7 @@
         <img src="dist\img\admin.jpg" class="elevation-2">
       </div>
       <div class="info">
-        <a href="#" class="d-block"><b>Created By: Amit Patoliya</b></a>
+        <a href="#" class="d-block"><b>Amit Patoliya</b></a>
       </div>
     </div>
 
