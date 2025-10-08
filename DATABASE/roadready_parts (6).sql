@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2025 at 09:13 AM
+-- Generation Time: Oct 08, 2025 at 12:30 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,12 +38,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `user_id`, `product_id`) VALUES
-(45, 1, 17),
-(46, 1, 8),
-(47, 1, 27),
-(49, 1, 13),
-(50, 1, 66),
-(52, 5, 44);
+(52, 5, 44),
+(57, 5, 33);
 
 -- --------------------------------------------------------
 
@@ -171,7 +167,11 @@ INSERT INTO `orders` (`id`, `user_id`, `order_number`, `first_name`, `last_name`
 (11, 1, 'ORD68C805339DAA6', 'Amit', 'Patoliya', '9510211376', 'amit@gmail.com', 'uuihdadbas,iuhsduisf', 'shflksjlfksdfsdf', '1', '2', '5', '302004', 'Google Pay', 1449.00, 50.00, 1499.00, '2025-09-15 12:23:15'),
 (12, 1, 'ORD68CA58DFB4B98', 'Amit', 'Patoliya', '9510211376', 'amit@gmail.com', 'uuihdadbas,iuhsduisf', 'shflksjlfksdfsdf', '1', '1', '2', '360004', 'Google Pay', 1000.00, 50.00, 1050.00, '2025-09-17 06:44:47'),
 (13, 1, 'ORD68CC3A1A7E5AB', 'Amit', 'Patoliya', '9510211376', 'amit@gmail.com', 'uuihdadbas,iuhsduisf', 'shflksjlfksdfsdf', '1', '1', '2', '360004', 'Google Pay', 2897.00, 50.00, 2947.00, '2025-09-18 16:58:02'),
-(14, 1, 'ORD68CE7953DFFAE', 'Amit', 'Patoliya', '9510211376', 'amit@gmail.com', 'uuihdadbas,iuhsduisf', 'shflksjlfksdfsdf', '1', '1', '2', '360004', 'Google Pay', 3130.00, 50.00, 3180.00, '2025-09-20 09:52:19');
+(14, 1, 'ORD68CE7953DFFAE', 'Amit', 'Patoliya', '9510211376', 'amit@gmail.com', 'uuihdadbas,iuhsduisf', 'shflksjlfksdfsdf', '1', '1', '2', '360004', 'Google Pay', 3130.00, 50.00, 3180.00, '2025-09-20 09:52:19'),
+(17, 1, 'ORD68DEAF8DE3976', 'Amit', 'Patoliya', '9510211376', 'amit@gmail.com', 'uuihdadbas,iuhsduisf', 'jggguu', '1', '1', '2', '360001', 'UPI id', 16350.00, 50.00, 16400.00, '2025-10-02 16:59:57'),
+(18, 1, 'ORD68DEB6731D219', 'Amit', 'Patoliya', '9510211376', 'admin@gmail.com', 'uuihdadbas,iuhsduisf', 'shflksjlfksdfsdf', '1', '1', '2', '360001', 'UPI id', 0.00, 50.00, 50.00, '2025-10-02 17:29:23'),
+(19, 1, 'ORD68DECE8C12261', 'Amit', 'Patoliya', '9510211376', 'amit@gmail.com', 'uuihdadbas,iuhsduisf', 'shflksjlfksdfsdf', '1', '1', '1', '380015', 'Google Pay', 560.00, 50.00, 610.00, '2025-10-02 19:12:12'),
+(20, 1, 'ORD68E0F7EA7F497', 'Amit', 'Patoliya', '9510211376', 'amit@gmail.com', 'uuihdadbas,iuhsduisf', 'shflksjlfksdfsdf', '1', '1', '1', '380002', 'UPI id', 4900.00, 50.00, 4950.00, '2025-10-04 10:33:14');
 
 -- --------------------------------------------------------
 
@@ -201,7 +201,16 @@ INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `product_name`, `pric
 (15, 13, 25, 'side-door-trimer-4', 899.00, 899.00),
 (16, 14, 15, 'car charger 4', 550.00, 550.00),
 (17, 14, 5, 'steering wheel cover 1', 2000.00, 2000.00),
-(18, 14, 16, 'car charger 5', 580.00, 580.00);
+(18, 14, 16, 'car charger 5', 580.00, 580.00),
+(23, 17, 17, 'car door guard 1', 500.00, 500.00),
+(24, 17, 8, 'steering wheel cover 4', 2250.00, 2250.00),
+(25, 17, 27, 'alloy 1', 4000.00, 4000.00),
+(26, 17, 13, 'car charger 2', 700.00, 700.00),
+(27, 17, 66, 'Car Spoiler 6', 6400.00, 6400.00),
+(28, 17, 46, 'Car Air Compressor 2', 2500.00, 2500.00),
+(29, 19, 21, 'car door guard 5', 560.00, 560.00),
+(30, 20, 17, 'car door guard 1', 500.00, 500.00),
+(31, 20, 30, 'alloy 4', 4400.00, 4400.00);
 
 -- --------------------------------------------------------
 
@@ -320,7 +329,21 @@ INSERT INTO `products` (`id`, `catid`, `subcatid`, `productname`, `productprice`
 (64, 1, 17, 'Car Spoiler 4', 5500, 'A car spoiler is an aerodynamic device attached to a vehicle, most commonly on the rear, to alter airflow and improve handling at high speeds.', '1759388891_car spoiler 4.jpeg'),
 (65, 1, 17, 'Car Spoiler 5', 5000, 'A car spoiler is an aerodynamic device attached to a vehicle, most commonly on the rear, to alter airflow and improve handling at high speeds.', '1759388935_car spoiler 5.jpg'),
 (66, 1, 17, 'Car Spoiler 6', 6400, 'A car spoiler is an aerodynamic device attached to a vehicle, most commonly on the rear, to alter airflow and improve handling at high speeds.', '1759388954_car spoiler 6.png'),
-(67, 1, 17, 'Car Spoiler 7', 6600, 'A car spoiler is an aerodynamic device attached to a vehicle, most commonly on the rear, to alter airflow and improve handling at high speeds.', '1759388967_car spoiler 7.jpeg');
+(67, 1, 17, 'Car Spoiler 7', 6600, 'A car spoiler is an aerodynamic device attached to a vehicle, most commonly on the rear, to alter airflow and improve handling at high speeds.', '1759388967_car spoiler 7.jpeg'),
+(68, 4, 12, 'tyre skinner 1', 600, 'tyre skinner 1tyre skinner 1tyre skinner 1tyre skinner 1tyre skinner 1tyre skinner 1\r\n• tyre skinner 1tyre skinner 1', '1759917464_tyre skinner 1.jpeg'),
+(69, 4, 12, 'tyre skinner 2', 650, '• tyre skinner 1tyre skinner 1tyre skinner 1tyre skinner 1tyre skinner 1\r\n• The query \"Tire Skinner\" does not correspond to a standard or commonly known product category.\r\n• The search results indicate that users who search for similar terms are often looking for one of the following.', '1759917566_tyre skinner 2.jpeg'),
+(70, 4, 12, 'tyre skinner 3', 550, '• The query \"Tire Skinner\" does not correspond to a standard or commonly known product category.\r\n• The search results indicate that users who search for similar terms are often looking for one of the following: a tire', '1759917665_tyre skinner 3.jpg'),
+(71, 4, 12, 'tyre skinner 4', 547, 'The query \"Tire Skinner\" does not correspond to a standard or commonly known product category.\r\n<br> The search results indicate that users who search for similar terms are often looking for one of the following: a tire', '1759917711_tyre skinner 4.jpg'),
+(72, 4, 12, 'tyre skinner 5', 7576, 'gcfjhgjyfjjhfhgf', '1759917735_tyre skinner 5.jpeg'),
+(73, 4, 12, 'tyre skinner 6', 1200, 'The query \"Tire Skinner\" does not correspond to a standard or commonly known product category.<br>• The search results indicate that users who search for similar terms are often looking for one of the following: a tire', '1759917797_tyre skinner all 6.jpg'),
+(74, 4, 13, 'Microfiber cleaning cloths 1', 400, '• scratch-free finish, you should use different types of microfiber cloths with specific grams per square meter (GSM) and pile types for different car-cleaning tasks.', '1759919044_Microfiber cleaning cloths 1.jpg'),
+(75, 4, 13, 'Microfiber cleaning cloths 2', 220, '(●\'◡\'●) scratch-free finish, you should use different types of microfiber cloths with specific grams per square meter (GSM) and pile types for different car-cleaning tasks.\r\n• GSM indicates the cloth\'s density and absorbency, while the nap (pile type) determines its effectiveness for a particular job, such as drying or polishing.', '1759919127_Microfiber cleaning cloths 2.jpeg'),
+(76, 4, 13, 'Microfiber cleaning cloths 3', 230, '(●\'◡\'●) scratch-free finish, you should use different types of microfiber cloths with specific grams per square meter (GSM) and pile types for different car-cleaning tasks. • GSM indicates the cloth\'s density and absorbency, while the nap (pile type) determines its effectiveness for a particular job, such as drying or polishing.', '1759919195_Microfiber cleaning cloths 3.jpeg'),
+(77, 4, 13, 'Microfiber cleaning cloths 4', 280, '(●\'◡\'●) scratch-free finish, you should use different types of microfiber cloths with specific grams per square meter (GSM) and pile types for different car-cleaning tasks. • GSM indicates the cloth\'s density and absorbency, while the nap (pile type) determines its effectiveness for a particular job, such as drying or polishing.', '1759919222_Microfiber cleaning cloths 4.jpeg'),
+(78, 4, 13, 'Microfiber cleaning cloths 5', 500, '(●\'◡\'●) scratch-free finish, you should use different types of microfiber cloths with specific grams per square meter (GSM) and pile types for different car-cleaning tasks. • GSM indicates the cloth\'s density and absorbency, while the nap (pile type) determines its effectiveness for a particular job, such as drying or polishing.', '1759919250_Microfiber cleaning cloths 5.jpeg'),
+(79, 4, 13, 'Microfiber cleaning cloths 6', 99, '(●\'◡\'●) scratch-free finish, you should use different types of microfiber cloths with specific grams per square meter (GSM) and pile types for different car-cleaning tasks. • GSM indicates the cloth\'s density and absorbency, while the nap (pile type) determines its effectiveness for a particular job, such as drying or polishing.', '1759919277_Microfiber cleaning cloths 6.jpeg'),
+(80, 4, 13, 'Microfiber cleaning cloths 7', 105, '(●\'◡\'●) scratch-free finish, you should use different types of microfiber cloths with specific grams per square meter (GSM) and pile types for different car-cleaning tasks. • GSM indicates the cloth\'s density and absorbency, while the nap (pile type) determines its effectiveness for a particular job, such as drying or polishing.', '1759919302_Microfiber cleaning cloths 7.jpeg'),
+(81, 4, 13, 'Microfiber cleaning cloths 8', 101, '(●\'◡\'●) scratch-free finish, you should use different types of microfiber cloths with specific grams per square meter (GSM) and pile types for different car-cleaning tasks. • GSM indicates the cloth\'s density and absorbency, while the nap (pile type) determines its effectiveness for a particular job, such as drying or polishing.', '1759919348_Microfiber cleaning cloths 8.jpeg');
 
 -- --------------------------------------------------------
 
@@ -389,15 +412,20 @@ CREATE TABLE `users` (
   `id` int(5) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(40) NOT NULL,
-  `bdate` int(8) NOT NULL
+  `mobile_no` varchar(15) NOT NULL,
+  `email_` varchar(50) NOT NULL,
+  `bdate` date NOT NULL,
+  `role` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `bdate`) VALUES
-(1, 'admin', '303f57cb6cd867e749e3c448c0b56ceb', 0);
+INSERT INTO `users` (`id`, `username`, `password`, `mobile_no`, `email_`, `bdate`, `role`) VALUES
+(1, 'admin', '303f57cb6cd867e749e3c448c0b56ceb', '1234567890', 'amitpatel@gmail.com', '2006-04-15', 'Admin'),
+(2, 'Amit', '0cb1eb413b8f7cee17701a37a1d74dc3', '9879117611', 'amit12@gmail.com', '2006-04-15', 'User'),
+(5, 'bca_par', 'e807f1fcf82d132f9bb018ca6738a19f', '7987987897', 'amit@gmail.com', '2009-06-11', 'Editor');
 
 -- --------------------------------------------------------
 
@@ -442,7 +470,8 @@ INSERT INTO `wishlist` (`id`, `user_id`, `product_id`) VALUES
 (12, 1, 1),
 (13, 5, 39),
 (14, 5, 64),
-(15, 5, 66);
+(15, 5, 66),
+(16, 5, 33);
 
 --
 -- Indexes for dumped tables
@@ -544,7 +573,7 @@ ALTER TABLE `wishlist`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -574,13 +603,13 @@ ALTER TABLE `countries`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `pincodes`
@@ -592,7 +621,7 @@ ALTER TABLE `pincodes`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 
 --
 -- AUTO_INCREMENT for table `states`
@@ -610,7 +639,7 @@ ALTER TABLE `subcategories`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `web_users`
@@ -622,7 +651,7 @@ ALTER TABLE `web_users`
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
