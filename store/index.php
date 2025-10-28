@@ -205,7 +205,7 @@
 					<!-- single product -->
 					<?php
 					include_once("config.php");
-                    $productqry = "select * from products order by RAND() LIMIT 12";
+                    $productqry = "select * from products ORDER BY RAND() LIMIT 12";
                     $productresult=mysqli_query($conn, $productqry) or exit("product select fail".mysqli_error($conn));
                     while ($productrow=mysqli_fetch_array($productresult)) {
 
