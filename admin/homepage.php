@@ -43,6 +43,7 @@ if(isset($_SESSION['uname'])){
             <?php 
               if (isset($_SESSION['error'])) {
                 echo $_SESSION["error"];
+                unset($_SESSION['error']);
               }
             ?></p></span>
           <div class="col-sm-4">

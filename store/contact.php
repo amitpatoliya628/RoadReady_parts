@@ -60,13 +60,13 @@
 					<div class="contact_info">
 						<div class="info_item">
 							<i class="lnr lnr-home"></i>
-							<h6>Harivandana Collage, Rajkot</h6>
+							<h6>RoadReady Parts, Rajkot</h6>
 							<p>Gujrat | India</p>
 						</div>
 						<div class="info_item">
 							<i class="lnr lnr-phone-handset"></i>
 							<h6><a href="#">00 (440) 9865 562</a></h6>
-							<p>Mon to Fri 9am to 6 pm</p>
+							<p>Mon to Fri 9 AM to 6 PM</p>
 						</div>
 						<div class="info_item">
 							<i class="lnr lnr-envelope"></i>

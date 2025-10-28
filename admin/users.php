@@ -131,7 +131,7 @@ if(isset($_SESSION['uname'])){
 <?php
 
             }else{
-              $_SESSION["error"]="You are not able to access this page";
+              $_SESSION["error"]="You are not allows to access user page";
               header("location:homepage.php");
             }
 }else{

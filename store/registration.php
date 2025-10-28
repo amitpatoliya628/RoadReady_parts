@@ -64,7 +64,7 @@
 						<?php
          					if(isset($_SESSION["error"])){
           				?>
-          				<p class="login-box-msg text-danger"><?php echo $_SESSION["error"] ?></p>
+          					
           				<?php
           					unset($_SESSION["error"]);
          					}
